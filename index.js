@@ -8,7 +8,7 @@ const text = process.argv[2]
 
 app.use(async (ctx, next) => {
     const now = new Date()
-    const result = `${text}: ${now}`
+    const result = `${now} ${text || ''}`
     console.log(result)
     ctx.body = result
 })
